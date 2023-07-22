@@ -5,7 +5,7 @@ interface MenuDividerProps {
 
 const MenuDivider = (props: MenuDividerProps) => {
     return (
-        <div className={`h-[1px] w-full bg-divider-color ${props.className}`}/>
+        <div className={`h-[1px] bg-divider-color ${props.className}`}/>
     );
 };
 

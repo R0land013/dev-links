@@ -7,12 +7,12 @@ import Button from "./Button";
 
 const LinkCard = () => {
     return (
-        <Card className="flex flex-col p-8 pt-2 m-5">
+        <Card className="flex flex-col p-8 pt-5 m-5">
 
             <div className="w-full flex flex-row items-center justify-between">
 
                 <div className="flex items-center justify-start">
-                    <img src={SomeImage} className="w-20" />
+                    <img src={SomeImage} className="h-8" />
                     <h3 className="text-header-color font-bold text-2xl ml-1">
                         Link Name
                     </h3>

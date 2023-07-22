@@ -55,7 +55,7 @@ const NavigationMenu = () => {
 
                         {index !== someLinkCategories.length - 1 ?
 
-                            <MenuDivider className="w-[87%] mt-3 mb-3" />
+                            <MenuDivider className="w-[95%] mt-3 mb-3" />
 
                             : undefined}
 

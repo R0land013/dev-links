@@ -1,4 +1,4 @@
-import SearchIcon from "data-base64:~assets/search.svg";
+import SearchIcon from "data-base64:~assets/icons/general/search.svg";
 import { useState } from "react";
 
 interface SearchBarProps {

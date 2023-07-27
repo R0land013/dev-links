@@ -1,7 +1,8 @@
 import { useState, useContext } from 'react';
-import NonFavoriteImage from "data-base64:~assets/non-favorite.svg";
+import NonFavoriteImage from "data-base64:~assets/icons/general/non-favorite.svg";
 import type { LinkCategory } from '~data/links';
 import SelectedLinkContext from '~context/selectedLink';
+import { getIconForLinkCategory } from '~data/category-icons';
 
 interface CategoryMenuProps {
     category: LinkCategory
@@ -32,7 +33,7 @@ const CategoryMenu = (props: CategoryMenuProps) => {
             <div className='flex flex-row justify-start items-center'>
 
                 <img
-                    src={NonFavoriteImage}
+                    src={getIconForLinkCategory(props.category.name)}
                     className='w-6' />
 
                 <span

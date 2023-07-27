@@ -1,6 +1,6 @@
 import Button from "~components/Button";
-import OpenIcon from "data-base64:~assets/open.svg";
-import LogoIcon from "data-base64:~assets/logo.svg";
+import OpenIcon from "data-base64:~assets/icons/general/open.svg";
+import LogoIcon from "data-base64:~assets/icons/general/logo.svg";
 import "./style.css";
 
 

@@ -1,5 +1,5 @@
 import "./../style.css";
-import LogoIcon from "data-base64:~assets/icon.png";
+import LogoIcon from "data-base64:~assets/icons/general/logo.svg";
 
 
 const Header = () => {

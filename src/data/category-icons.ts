@@ -1,0 +1,21 @@
+import type { LinkCategoryName } from "./links";
+import FontsCategoryIcon from "data-base64:~assets/icons/categories/fonts.svg";
+import IconsCategoryIcon from "data-base64:~assets/icons/categories/icons.svg";
+import FavoriteIcon from "data-base64:~assets/icons/general/non-favorite.svg";
+
+
+export const getIconForLinkCategory = (category: LinkCategoryName) => {
+
+    switch (category) {
+
+    case 'Fonts':
+        return FontsCategoryIcon;
+
+    case 'Icons':
+        return IconsCategoryIcon;
+
+    default:
+        return FavoriteIcon;
+    }
+
+};

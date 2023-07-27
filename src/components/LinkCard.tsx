@@ -1,6 +1,6 @@
 import Card from "./Card";
-import NonFavoriteImage from "data-base64:~assets/non-favorite.svg";
-import LinkChainImage from "data-base64:~assets/link-chain.svg";
+import NonFavoriteImage from "data-base64:~assets/icons/general/non-favorite.svg";
+import LinkChainImage from "data-base64:~assets/icons/general/link-chain.svg";
 import Button from "./Button";
 import { type Link } from "~data/links";
 

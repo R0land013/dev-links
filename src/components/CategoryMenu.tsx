@@ -1,23 +1,28 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import NonFavoriteImage from "data-base64:~assets/non-favorite.svg";
+import type { LinkCategory } from '~data/links';
+import SelectedLinkContext from '~context/selectedLink';
 
 interface CategoryMenuProps {
-    categoryName: string;
-    items?: Array<string>;
+    category: LinkCategory
 }
 
 const QUANTITY_OF_ITEMS_TO_SHOW = 5;
 
 const CategoryMenu = (props: CategoryMenuProps) => {
 
+    const links = props.category.links;
+
+    const selectedLinkContext = useContext(SelectedLinkContext);
+
     const [quantityOfShownItems, setQuantityOfShownItems] = useState<number>(
-        QUANTITY_OF_ITEMS_TO_SHOW > props.items.length ? props.items.length : QUANTITY_OF_ITEMS_TO_SHOW
+        QUANTITY_OF_ITEMS_TO_SHOW > links.length ? links.length : QUANTITY_OF_ITEMS_TO_SHOW
     );
 
     const showMoreItems = () => {
         
-        setQuantityOfShownItems(quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW >= props.items.length
-            ? props.items.length : quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW
+        setQuantityOfShownItems(quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW >= props.category.links.length
+            ? links.length : quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW
         );
     };
 
@@ -33,26 +38,27 @@ const CategoryMenu = (props: CategoryMenuProps) => {
                 <span
                     className='text-header-color text-lg ml-3 font-medium'>
 
-                    {props.categoryName}
+                    {props.category.name}
                 </span>
             </div>
 
 
             <div className='flex flex-col ml-7'>
 
-                {props.items?.map((anItem, index) => index < quantityOfShownItems && (
+                {links.map((aLink, index) => index < quantityOfShownItems && (
                     <button
-                        key={anItem}
-                        className='flex flex-row justify-start items-center mt-1 hover:bg-focus-color p-1 pl-3 pr-3 rounded-lg'>
+                        key={aLink.linkUrl}
+                        className={`flex flex-row justify-start items-center mt-1 hover:bg-focus-color p-1 pl-3 pr-3 rounded-lg ${ selectedLinkContext.selectedLink === aLink ? 'bg-focus-color border-2 border-action-color' : ''}`}
+                        onClick={() => selectedLinkContext.setSelectedLink(aLink)}>
 
                         <img
-                            src={NonFavoriteImage}
+                            src={`https://www.google.com/s2/favicons?domain=${aLink.linkUrl}&sz=64`}
                             className='w-5' />
 
                         <span
                             className='text-header-color text-base ml-2'>
 
-                            {anItem}
+                            {aLink.name}
                         </span>
                     </button>
                 ))}
@@ -60,7 +66,7 @@ const CategoryMenu = (props: CategoryMenuProps) => {
             </div>
 
 
-            {quantityOfShownItems < props.items.length && (
+            {quantityOfShownItems < links.length && (
                 
                 <div className='w-full flex flex-col items-center justify-center mt-2'>
                     
@@ -73,10 +79,7 @@ const CategoryMenu = (props: CategoryMenuProps) => {
                 
                 </div>
             )}
-
-
-
-
+            
         </div>
     );
 };

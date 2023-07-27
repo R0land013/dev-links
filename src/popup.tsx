@@ -29,9 +29,7 @@ function IndexPopup() {
 
             <Button
                 onClick={() => {
-                    chrome.tabs.create({
-                        url: './tabs/browse-links.html'
-                    });
+                    window.open('./tabs/browse-links.html');
                 }}
                 className="mt-10">
 

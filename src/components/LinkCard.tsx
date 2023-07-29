@@ -1,15 +1,29 @@
 import Card from "./Card";
-import NonFavoriteImage from "data-base64:~assets/icons/general/non-favorite.svg";
+import NonFavoriteIcon from "data-base64:~assets/icons/general/non-favorite.svg";
+import FavoriteIcon from "data-base64:~assets/icons/general/favorite.svg";
 import LinkChainImage from "data-base64:~assets/icons/general/link-chain.svg";
 import Button from "./Button";
 import { type Link } from "~data/links";
+import { useCallback, useContext } from "react";
+import FavoriteLinksContext from "~context/favoriteLinks";
 
 
 type CardLinkProps = {
     link: Link
 }
 
+
+
 const LinkCard = (props: CardLinkProps) => {
+
+    const {favoriteLinks, addNewFavoriteLink, removeLinkFromFavorites} = useContext(FavoriteLinksContext);
+
+    const isFavoriteLink = useCallback(() => {
+        const foundLink = favoriteLinks?.find(aLink => aLink.name === props.link.name);
+        return !!foundLink;
+    }, [props.link, favoriteLinks]);
+
+    const isFavorite = isFavoriteLink();
 
     return (
         <Card className="flex flex-col p-8 pt-5 m-5">
@@ -23,9 +37,17 @@ const LinkCard = (props: CardLinkProps) => {
                     </h3>
                 </div>
 
-                <button>
+                <button
+                    onClick={() => {
+                        if(isFavorite) {
+                            removeLinkFromFavorites(props.link);
+                        }
+                        else {
+                            addNewFavoriteLink(props.link);
+                        }
+                    }}>
                     <img
-                        src={NonFavoriteImage}
+                        src={isFavorite ? FavoriteIcon : NonFavoriteIcon}
                         className="w-10" />
                 </button>
 

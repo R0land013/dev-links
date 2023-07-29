@@ -1,11 +1,13 @@
 import { useState, useContext } from 'react';
-import NonFavoriteImage from "data-base64:~assets/icons/general/non-favorite.svg";
-import type { LinkCategory } from '~data/links';
+import FavoriteIcon from "data-base64:~assets/icons/general/favorite.svg";
+import type { LinkCategory, LinkCategoryName } from '~data/links';
 import SelectedLinkContext from '~context/selectedLink';
 import { getIconForLinkCategory } from '~data/category-icons';
 
 interface CategoryMenuProps {
-    category: LinkCategory
+    category: Omit<LinkCategory, 'name'> & {
+        name: LinkCategoryName | 'Favorites'
+    }
 }
 
 const QUANTITY_OF_ITEMS_TO_SHOW = 5;

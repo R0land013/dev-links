@@ -1,10 +1,10 @@
 import type { LinkCategoryName } from "./links";
 import FontsCategoryIcon from "data-base64:~assets/icons/categories/fonts.svg";
 import IconsCategoryIcon from "data-base64:~assets/icons/categories/icons.svg";
-import FavoriteIcon from "data-base64:~assets/icons/general/non-favorite.svg";
+import FavoriteIcon from "data-base64:~assets/icons/categories/favorite.svg";
 
 
-export const getIconForLinkCategory = (category: LinkCategoryName) => {
+export const getIconForLinkCategory = (category: LinkCategoryName | 'Favorites') => {
 
     switch (category) {
 

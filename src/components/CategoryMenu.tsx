@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import FavoriteIcon from "data-base64:~assets/icons/general/favorite.svg";
 import type { LinkCategory, LinkCategoryName } from '~data/links';
 import SelectedLinkContext from '~context/selectedLink';
 import { getIconForLinkCategory } from '~data/category-icons';

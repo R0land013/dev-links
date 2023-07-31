@@ -1,8 +1,10 @@
 import SearchIcon from "data-base64:~assets/icons/general/search.svg";
 import { useState } from "react";
 
+
 interface SearchBarProps {
     className?: string;
+    onChangeText: (text: string) => void
 }
 
 const SearchBar = (props: SearchBarProps) => {
@@ -19,6 +21,7 @@ const SearchBar = (props: SearchBarProps) => {
                 className="border-none focus:outline-none focus:bg-focus-color w-full h-full text-text-color text-base"
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
+                onChange={(event) => props.onChangeText(event.target.value)}
                 type="text"/>
             
             <img

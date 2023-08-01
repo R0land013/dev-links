@@ -54,7 +54,7 @@ const CategoryMenu = (props: CategoryMenuProps) => {
                 {links.map((aLink, index) => index < quantityOfShownItems && (
                     <button
                         key={aLink.linkUrl}
-                        className={`flex flex-row justify-start items-center mt-1 hover:bg-focus-color p-1 pl-3 pr-3 rounded-lg ${ selectedLinkContext.selectedLink === aLink ? 'bg-focus-color border-2 border-action-color' : ''}`}
+                        className={`flex flex-row justify-start items-center mt-1 hover:bg-focus-color p-1 pl-3 pr-3 rounded-lg ${ selectedLinkContext.selectedLink?.name === aLink.name ? 'bg-focus-color border-2 border-action-color' : ''}`}
                         onClick={() => selectedLinkContext.setSelectedLink(aLink)}>
 
                         <img

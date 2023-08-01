@@ -1,22 +1,26 @@
-import lunr from "lunr";
+import MiniSearch, { type SearchResult} from 'minisearch';
 import linksByCategory, { type Link, type LinkCategory } from "~data/links";
 
 
-const searchIndex = lunr(function () {
+const searchIndex = new MiniSearch<Link & {id: string}>({
+    fields: ['name', 'description'],
+    storeFields: ['name', 'description', 'category', 'linkUrl'],
+    searchOptions: {
+        prefix: true,
+        combineWith: 'AND'
+    }
+});
 
-    this.field('name');
-    this.field('description');
 
-    linksByCategory.forEach((aCategory) => {
 
-        aCategory.links.forEach((aLink) => {
-            this.add({
-                id: aLink.name,
-                ...aLink
-            });
-        });
+linksByCategory.forEach((aCategory) => {
+
+    aCategory.links.forEach((aLink) => {
+        searchIndex.add({...aLink, id: aLink.name});
     });
 });
+
+
 
 /**
  * This class allows to search links by name or description.
@@ -49,10 +53,10 @@ class LinkSearcher {
             resolve(searchedLinksByCategory);
         });
         this.lastSearchPromise = currentSearchPromise;
-        
+
         const searchedLinksByCategory = await currentSearchPromise;
 
-        if(currentSearchPromise === this.lastSearchPromise) {
+        if (currentSearchPromise === this.lastSearchPromise) {
             this.foundCallback(searchedLinksByCategory);
         }
 
@@ -63,54 +67,37 @@ class LinkSearcher {
 
 const searchLinks = (searchText: string) => {
 
-    const queryString = constructQueryString(searchText);
+    const query = constructQueryString(searchText);
 
-    const results = searchIndex.search(queryString);
+    const results = searchIndex.search(query);
 
-    const resultLinkNames: Array<string> = results.map(aResult => aResult.ref);
-    const resultLinks = extractLinkFromCategoriesUsingLinkNames(resultLinkNames);
+    const resultLinks = results.map((aResult: SearchResult & Link) => {
+        return {
+            name: aResult.name,
+            category: aResult.category,
+            linkUrl: aResult.linkUrl,
+            description: aResult.description,
+        };
+    });
 
     return groupLinksByCategory(resultLinks);
 
 };
 
 
-/**
- * Create a query where all words must be present in the document.
- * The words can be incomplete. For example user could write
- * 'hop', and a document with 'hopping' should match.
- * 
- * @param searchText - The text the user wrote for searching.
- * @returns A string with wildcard representing the query.
- */
 const constructQueryString = (searchText: string) => {
     const words = searchText.split(' ');
     let queryString = '';
 
     words.forEach((word) => {
-        if(word) {
-            queryString = `${queryString} +*${word}*`;
+        if (word) {
+            queryString = `${queryString} ${word}`;
         }
     });
-
+    
     return queryString.trim();
 };
 
-const extractLinkFromCategoriesUsingLinkNames = (linkNames: Array<string>) => {
-
-    const links: Array<Link> = [];
-
-    linksByCategory.forEach((aCategory: LinkCategory) => {
-        aCategory.links.forEach((aLink) => {
-
-            if (linkNames.includes(aLink.name)) {
-                links.push(aLink);
-            }
-        });
-    });
-
-    return links;
-};
 
 const groupLinksByCategory = (links: Array<Link>) => {
 

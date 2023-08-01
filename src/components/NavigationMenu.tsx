@@ -42,7 +42,7 @@ const NavigationMenu = () => {
         <Card className="rounded-none w-[30%] h-[100vh] flex flex-col items-center">
 
             <SearchBar
-                className="w-[80%]"
+                className="w-[80%] mb-2"
                 onChangeText={searchLinks}/>
 
             <div className="flex flex-col items-center w-full mt-2 overflow-y-auto">

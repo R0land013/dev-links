@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import type { Link } from "~data/links";
 import FavoriteLinksContext from "~context/favoriteLinks";
 import { addNewFavoriteLink, getFavoriteLinks, removeFavoriteLink } from "~features/favoriteLinks";
+import WelcomeInfo from "~components/WelcomeInfo";
 
 
 const BrowseLinks = () => {
@@ -51,6 +52,10 @@ const BrowseLinks = () => {
 
                     <div className="flex flex-col w-full h-[100vh] overflow-y-auto">
                         <Header />
+
+                        {!selectedLink && (
+                            <WelcomeInfo/>
+                        )}
 
                         {selectedLink && (
                             <LinkCard link={selectedLink} />

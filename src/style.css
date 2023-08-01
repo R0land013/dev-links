@@ -50,3 +50,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-hover-action-color rounded-md
 }
+
+h1, h2, h3, h4, h5 {
+    @apply text-header-color
+}
+
+li {
+    @apply text-header-color text-base
+}
+
+a {
+    @apply text-hover-action-color
+}

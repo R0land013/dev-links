@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import type { LinkCategory, LinkCategoryName } from '~data/links';
 import SelectedLinkContext from '~context/selectedLink';
 import { getIconForLinkCategory } from '~data/category-icons';
@@ -27,6 +27,10 @@ const CategoryMenu = (props: CategoryMenuProps) => {
             ? links.length : quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW
         );
     };
+
+    useEffect(() => {
+        setQuantityOfShownItems(QUANTITY_OF_ITEMS_TO_SHOW > links.length ? links.length : QUANTITY_OF_ITEMS_TO_SHOW);
+    }, [links.length]);
 
     return (
         <div className='flex flex-col items-start w-full'>

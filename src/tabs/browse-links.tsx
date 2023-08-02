@@ -1,4 +1,3 @@
-import NavigationMenu from "~components/NavigationMenu";
 import Header from "./../components/Header";
 import "./../style.css";
 import LinkCard from "~components/LinkCard";
@@ -8,6 +7,7 @@ import type { Link } from "~data/links";
 import FavoriteLinksContext from "~context/favoriteLinks";
 import { addNewFavoriteLink, getFavoriteLinks, removeFavoriteLink } from "~features/favoriteLinks";
 import WelcomeInfo from "~components/WelcomeInfo";
+import NavigationMenu from "~components/NavigationMenu";
 
 
 const BrowseLinks = () => {
@@ -48,9 +48,10 @@ const BrowseLinks = () => {
 
                 <div className="w-full flex flex-row flex-grow h-[100vh] items-start">
 
-                    <NavigationMenu />
+                    <NavigationMenu/>
 
                     <div className="flex flex-col w-full h-[100vh] overflow-y-auto">
+                        
                         <Header />
 
                         {!selectedLink && (

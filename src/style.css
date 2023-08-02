@@ -51,7 +51,11 @@ body {
     @apply bg-hover-action-color rounded-md
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     @apply text-header-color
 }
 
@@ -61,4 +65,48 @@ li {
 
 a {
     @apply text-hover-action-color
+}
+
+
+/* Navigation Menu animation*/
+
+@keyframes show-nav-menu {
+    from {
+        right: 100vw;
+    }
+
+    to {
+        right: 30vw;
+    }
+}
+
+.shown-nav-menu {
+    display: flex;
+    animation-fill-mode: forwards;
+    animation-name: show-nav-menu;
+    animation-duration: 0.75s;
+}
+
+
+
+@keyframes hide-nav-menu {
+    from {
+        right: 30vw;
+        @apply flex;
+    }
+
+    to {
+        right: 100vw;
+    }
+}
+
+.hidden-nav-menu {
+    animation-fill-mode: forwards;
+    animation-name: hide-nav-menu;
+    animation-duration: 0.75s;
+}
+
+#nav-menu-container-modal {
+    @apply w-[100vw] h-[100vh] bg-modal-bg-container-color fixed right-0 top-0 left-0 bottom-0;
+    @apply md:hidden z-[9];
 }

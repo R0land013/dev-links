@@ -1,14 +1,19 @@
-import Card from "./Card";
-import CategoryMenu from "./CategoryMenu";
-import MenuDivider from "./MenuDivider";
-import SearchBar from "./SearchBar";
+import Card from "../Card";
+import CategoryMenu from "../CategoryMenu";
+import MenuDivider from "../MenuDivider";
+import SearchBar from "../SearchBar";
 import linkCategories, { type LinkCategory } from "~data/links";
 import { useContext, useState, useRef, useCallback } from 'react';
 import FavoriteLinksContext from "~context/favoriteLinks";
 import LinkSearcher from "~features/searchLinks";
 
 
-const NavigationMenu = () => {
+interface NavigationMenuProps {
+    id?: string;
+    className?: string
+}
+
+const NavigationMenu = (props: NavigationMenuProps) => {
 
     const { favoriteLinks } = useContext(FavoriteLinksContext);
 
@@ -22,8 +27,8 @@ const NavigationMenu = () => {
     }));
 
     const searchLinks = useCallback((searchText: string) => {
-                    
-        if(searchText.trim()) {
+
+        if (searchText.trim()) {
             setVisibleFavoriteLinks(false);
             linkSearcherRef.current.searchLinks(searchText);
             setLoading(true);
@@ -34,16 +39,19 @@ const NavigationMenu = () => {
             setLoading(false);
         }
 
-        
+
     }, [linkSearcherRef]);
 
 
     return (
-        <Card className="rounded-none w-[30%] h-[100vh] flex flex-col items-center">
+
+        <Card
+            id="nav-menu"
+            className={`rounded-none h-[100vh] md:static md:w-[40%] md:flex flex-col items-center hidden w-[70vw] fixed z-10 ${props.className ?? ''}`}>
 
             <SearchBar
                 className="w-[80%] mb-2"
-                onChangeText={searchLinks}/>
+                onChangeText={searchLinks} />
 
             <div className="flex flex-col items-center w-full mt-2 overflow-y-auto">
 
@@ -95,6 +103,7 @@ const NavigationMenu = () => {
 
 
         </Card>
+
     );
 };
 

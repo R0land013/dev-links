@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import type { LinkCategory, LinkCategoryName } from '~data/links';
 import SelectedLinkContext from '~context/selectedLink';
 import { getIconForLinkCategory } from '~data/category-icons';
+import { hideNavigationMenu } from './NavigationMenu';
 
 interface CategoryMenuProps {
     category: Omit<LinkCategory, 'name'> & {
@@ -55,7 +56,10 @@ const CategoryMenu = (props: CategoryMenuProps) => {
                     <button
                         key={aLink.linkUrl}
                         className={`flex flex-row justify-start items-center mt-1 hover:bg-focus-color p-1 pl-3 pr-3 rounded-lg ${ selectedLinkContext.selectedLink?.name === aLink.name ? 'bg-focus-color border-2 border-action-color' : ''}`}
-                        onClick={() => selectedLinkContext.setSelectedLink(aLink)}>
+                        onClick={() => {
+                            hideNavigationMenu();
+                            selectedLinkContext.setSelectedLink(aLink);
+                        }}>
 
                         <img
                             src={`https://www.google.com/s2/favicons?domain=${aLink.linkUrl}&sz=64`}

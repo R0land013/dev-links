@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="343.19699"
-   height="61.265965"
-   viewBox="0 0 90.804673 16.20997"
+   width="349.19699"
+   height="63.265961"
+   viewBox="0 0 92.392183 16.739137"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
@@ -23,22 +23,23 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4253648"
-     inkscape:cx="162.41457"
-     inkscape:cy="90.152362"
+     inkscape:zoom="2.8507296"
+     inkscape:cx="290.27657"
+     inkscape:cy="21.924212"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="0"
      inkscape:window-y="34"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg5"
+     inkscape:current-layer="layer1"
      units="px"
-     width="793.70081px"
+     width="343.19699px"
      fit-margin-top="2.7755576e-17"
      lock-margins="true"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     height="63.26596px" />
   <defs
      id="defs2">
     <rect
@@ -83,15 +84,15 @@
      transform="translate(-54.91296,-48.504445)">
     <text
        xml:space="preserve"
-       transform="matrix(0.40509549,0,0,0.40509549,-176.98436,-23.436278)"
+       transform="matrix(0.40509549,0,0,0.40509549,-175.64577,-23.157428)"
        id="text5844"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect5846);fill:#652f9e;fill-opacity:1;stroke:none"><tspan
          x="613.60742"
          y="210.95789"
-         id="tspan24403">Dev Links</tspan></text>
+         id="tspan853">Dev Links</tspan></text>
     <g
        id="g870"
-       transform="matrix(0.03621656,0,0,0.03621643,53.753906,47.338479)"
+       transform="matrix(0.03621656,0,0,0.03621643,53.82443,47.624347)"
        style="fill:url(#meshgradient23664);fill-opacity:1"
        inkscape:label="rocket">
       <path

@@ -1,5 +1,5 @@
 import "./../style.css";
-import LogoIcon from "data-base64:~assets/icons/general/logo.svg";
+import BrandIcon from "data-base64:~assets/icons/general/brand.svg";
 import BurgerButton from "./BurgerButton";
 import { showNavigationMenu } from "./NavigationMenu";
 
@@ -13,9 +13,7 @@ const Header = () => {
                 className="md:hidden" />
 
             <div className="w-full flex flex-row justify-center items-center">
-                <img src={LogoIcon} className="h-10" />
-
-                <h1 className="text-header-color font-bold text-4xl">Dev Links</h1>
+                <img src={BrandIcon} className="h-10" />
             </div>
 
 

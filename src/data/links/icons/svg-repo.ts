@@ -1,4 +1,4 @@
-import type { IconsLinkType } from "./";
+import type { IconsLink } from "./";
 
 
 const SvgRepoDescription =
@@ -6,7 +6,7 @@ const SvgRepoDescription =
 Más de 500 000 iconos y vectores SVG Open Source
 `;
 
-const SvgRepo: IconsLinkType = {
+const SvgRepo: IconsLink = {
     name: 'SVG Repo',
     category: 'Icons',
     linkUrl: 'https://www.svgrepo.com',

@@ -1,18 +1,18 @@
-import type { FontsLinkType } from "./";
+import type { FontsLink } from "./";
 
 
-const GoogleFontDescription =
+const GoogleFontsDescription =
 `
-Haz que tu web sea más hermosa, rápida y abierta a través de una gran tipografía.
+Make your website more beautiful, fast and open through great typography.
 `;
 
 
-const GoogleFont: FontsLinkType = {
+const GoogleFonts: FontsLink = {
     name: 'Google Fonts',
     category: 'Fonts',
     linkUrl: 'https://fonts.google.com/',
-    description: GoogleFontDescription,
+    description: GoogleFontsDescription,
 };
 
 
-export default GoogleFont;
+export default GoogleFonts;

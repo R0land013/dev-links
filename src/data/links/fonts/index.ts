@@ -1,19 +1,19 @@
 import type { Link, LinkCategory, LinkCategoryName } from "..";
 import FontSpace from "./font-space";
-import GoogleFont from "./google-fonts";
+import GoogleFonts from "./google-fonts";
 
 
-type FontsCategoryType = Extract<LinkCategoryName, 'Fonts'>;
+type FontsCategoryName = Extract<LinkCategoryName, 'Fonts'>;
 
 
-export type FontsLinkType = Omit<Link, 'category'> & {
-    category: FontsCategoryType
+export type FontsLink = Omit<Link, 'category'> & {
+    category: FontsCategoryName
 };
 
 
-const fontsCategoryLinks: Array<FontsLinkType> = [
+const fontsCategoryLinks: Array<FontsLink> = [
     FontSpace,
-    GoogleFont,
+    GoogleFonts,
 ];
 
 

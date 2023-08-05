@@ -4,6 +4,32 @@
     <img src="assets/icons/general/brand.svg" alt="Logo" style="height:50px;">
 </div>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started-with-development">Getting started with development</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#starting-dev-server">Starting dev server</a></li>
+        <li><a href="#loading-the-extension-in-chrome">Loading the Extension in Chrome</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
 ## About the project
 
 Since I started using social networks, I have been following people of programming world that share excellent resources and tools. I always said 'Wow, what a useful tool! I will use it in my next project'. But, I always forgot the name of the tools I wanted to use, I did not save the information about it. Finally, when I had the need of some tool for an specific task, I started struggling online to find a tool that would fulfill my requirements, and lost a lot of time. I didn't find that needed resource sometimes.
@@ -14,7 +40,7 @@ For that reason I created **Dev Links**. A browser extension for:
 - ⭐ Leave the need of remember links and names of tools.
 - 🚀 Staying focus and increase your productivity.
 
-## Built with
+### Built with
 
 - [![Plasmo][Plasmo-framework]][Plasmo-url]
 - [![React][React.js]][React-url]
@@ -77,18 +103,18 @@ You can learn more about Plasmo framework [here](http://plasmo.com/).
 
 If you wish to contribute, you can read the guide in [CONTRIBUTING.md](/CONTRIBUTING.md).
 
-## Acknowledgments
+## License
 
-I wanted to thank to [Javier Alejandro González Casellas](https://github.com/JalexCode) and
-[Manuel Ernesto Garcia](https://github.com/manuelernestog) for the help.
+This project is under [MIT LICENSE](/LICENSE).
 
 ## Contact
 
 You can find my contact info [here](https://r0land013.github.io/).
 
-## License
+## Acknowledgments
 
-This project is under [MIT LICENSE](/LICENSE).
+I wanted to thank to [Javier Alejandro González Casellas](https://github.com/JalexCode) and
+[Manuel Ernesto Garcia](https://github.com/manuelernestog) for the help.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

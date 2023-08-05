@@ -1,4 +1,4 @@
-import type { FontsLinkType } from "./";
+import type { FontsLink } from "./";
 
 
 const FontSpaceDescription =
@@ -7,7 +7,7 @@ Descargas de 100,000+ fuentes gratuitas con licencia legal que son perfectas par
 `;
 
 
-const FontSpace: FontsLinkType = {
+const FontSpace: FontsLink = {
     name: 'Font Space',
     category: 'Fonts',
     linkUrl: 'https://www.fontspace.com/',

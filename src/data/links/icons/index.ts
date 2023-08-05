@@ -3,15 +3,15 @@ import SvgRepo from "./svg-repo";
 import type { Link, LinkCategory, LinkCategoryName } from '../index';
 
 
-type IconsCategoryType = Extract<LinkCategoryName, 'Icons'>;
+type IconsCategoryName = Extract<LinkCategoryName, 'Icons'>;
 
 
-export type IconsLinkType = Omit<Link, 'category'> & {
-    category: IconsCategoryType
+export type IconsLink = Omit<Link, 'category'> & {
+    category: IconsCategoryName
 };
 
 
-const iconsCategoryLinks: Array<IconsLinkType> = [
+const iconsCategoryLinks: Array<IconsLink> = [
     Lordicon,
     SvgRepo
 ];

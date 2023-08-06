@@ -3,8 +3,9 @@ import type { IconsLink } from "./";
 
 const LordiconDescription =
 `
-Impresionante colección de más de 8000 íconos animados (1400+ son de uso gratuito)
+Impressive collection of 8000+ animated icons (1400+ are free to use).
 `;
+
 
 const Lordicon: IconsLink = {
     name: 'Lordicon',

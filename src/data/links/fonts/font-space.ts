@@ -3,7 +3,7 @@ import type { FontsLink } from "./";
 
 const FontSpaceDescription =
 `
-Descargas de 100,000+ fuentes gratuitas con licencia legal que son perfectas para sus proyectos de diseño.
+Downloads of 100,000+ legally licensed free fonts that are perfect for your design projects.
 `;
 
 

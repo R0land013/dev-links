@@ -5,9 +5,10 @@ import fontsCategory from "./fonts";
 import iconsCategory from "./icons";
 import logoCreationCategory from "./logo-creation";
 import webHostingCategory from "./web-hosting";
+import webTemplatesCategory from "./web-templates";
 
 
-export type LinkCategoryName = 'CMS' | 'Colors' | 'Forms' | 'Fonts' | 'Icons' | 'Logo creation' | 'Web hosting';
+export type LinkCategoryName = 'CMS' | 'Colors' | 'Forms' | 'Fonts' | 'Icons' | 'Logo creation' | 'Web hosting' | 'Web templates';
 
 
 export type LinkCategory = {
@@ -32,6 +33,7 @@ const linksByCategory: Array<LinkCategory> = [
     iconsCategory,
     logoCreationCategory,
     webHostingCategory,
+    webTemplatesCategory,
 ];
 
 

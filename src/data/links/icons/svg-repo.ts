@@ -3,7 +3,7 @@ import type { IconsLink } from "./";
 
 const SvgRepoDescription =
 `
-Más de 500 000 iconos y vectores SVG Open Source
+Over 500,000 Open Source SVG Vectors and Icons.
 `;
 
 const SvgRepo: IconsLink = {

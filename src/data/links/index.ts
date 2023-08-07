@@ -1,9 +1,10 @@
 import colorsCategory from "./colors";
 import fontsCategory from "./fonts";
 import iconsCategory from "./icons";
+import logoCreationCategory from "./logo-creation";
 
 
-export type LinkCategoryName = 'Colors' | 'Fonts' | 'Icons';
+export type LinkCategoryName = 'Colors' | 'Fonts' | 'Icons' | 'Logo creation';
 
 
 export type LinkCategory = {
@@ -23,7 +24,8 @@ export type Link = {
 const linksByCategory: Array<LinkCategory> = [
     colorsCategory,
     fontsCategory,
-    iconsCategory
+    iconsCategory,
+    logoCreationCategory,
 ];
 
 

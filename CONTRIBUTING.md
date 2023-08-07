@@ -222,6 +222,8 @@ in `.svg` format, this is for keeping Dev Links as lightweight
 as possible. The file name of the icon should match the name
 of the category folder you created.
 You will add the icon as `/assets/icons/categories/images.svg`.
+The icon must be `#652F9E` color and have outlined style, this is
+for keeping consistency with the other category icons.
 
 In the end you will have to add your icon in the `getIconForLinkCategory`
 function in `/src/data/category-icons.ts`:

@@ -79,7 +79,7 @@ a {
 
 @keyframes show-nav-menu {
     from {
-        right: 100vw;
+        right: 105vw;
     }
 
     to {
@@ -103,7 +103,7 @@ a {
     }
 
     to {
-        right: 100vw;
+        right: 105vw;
     }
 }
 

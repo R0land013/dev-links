@@ -47,7 +47,7 @@ const NavigationMenu = (props: NavigationMenuProps) => {
 
         <Card
             id="nav-menu"
-            className={`rounded-none h-[100vh] md:static md:w-[40%] md:flex flex-col items-center hidden w-[70vw] fixed z-10 ${props.className ?? ''}`}>
+            className={`rounded-none h-[100vh] md:static md:w-[40%] md:flex flex-col items-center w-[70vw] fixed right-[105vw] z-10 ${props.className ?? ''}`}>
 
             <SearchBar
                 className="w-[80%] mb-2"

@@ -3,7 +3,7 @@ import linksByCategory, { type Link, type LinkCategory } from "~data/links";
 
 
 const searchIndex = new MiniSearch<Link & {id: string}>({
-    fields: ['name', 'description'],
+    fields: ['name', 'description', 'category'],
     storeFields: ['name', 'description', 'category', 'linkUrl'],
     searchOptions: {
         prefix: true,

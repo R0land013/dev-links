@@ -4,6 +4,7 @@ import ColorsCategoryIcon from "data-base64:~assets/icons/categories/colors.svg"
 import FormsCategoryIcon from "data-base64:~assets/icons/categories/forms.svg";
 import FontsCategoryIcon from "data-base64:~assets/icons/categories/fonts.svg";
 import IconsCategoryIcon from "data-base64:~assets/icons/categories/icons.svg";
+import ImageCompressionCategoryIcon from "data-base64:~assets/icons/categories/image-compression.svg";
 import LogoCreationCategoryIcon from "data-base64:~assets/icons/categories/logo-creation.svg";
 import PicturesCategoryIcon from "data-base64:~assets/icons/categories/pictures.svg";
 import ProjectManagementCategoryIcon from "data-base64:~assets/icons/categories/project-management.svg";
@@ -30,6 +31,9 @@ export const getIconForLinkCategory = (category: LinkCategoryName | 'Favorites')
 
     case 'Icons':
         return IconsCategoryIcon;
+        
+    case 'Image compression':
+        return ImageCompressionCategoryIcon;
 
     case 'Logo creation':
         return LogoCreationCategoryIcon;

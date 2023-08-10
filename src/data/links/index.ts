@@ -8,9 +8,10 @@ import webHostingCategory from "./web-hosting";
 import webTemplatesCategory from "./web-templates";
 import projectManagementCategory from "./project-management";
 import picturesCategory from "./pictures";
+import imageCompressionCategory from "./image-compression";
 
 
-export type LinkCategoryName = 'CMS' | 'Colors' | 'Forms' | 'Fonts' | 'Icons' | 'Logo creation' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
+export type LinkCategoryName = 'CMS' | 'Colors' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Logo creation' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
 
 
 export type LinkCategory = {
@@ -33,6 +34,7 @@ const linksByCategory: Array<LinkCategory> = [
     formsCategory,
     fontsCategory,
     iconsCategory,
+    imageCompressionCategory,
     logoCreationCategory,
     picturesCategory,
     projectManagementCategory,

@@ -1,6 +1,6 @@
 {
     "name": "dev-links",
-    "displayName": "Dev links",
+    "displayName": "Dev Links",
     "version": "0.0.1",
     "description": "All links a developer would need.",
     "author": "https://github.com/R0land013",
@@ -38,11 +38,6 @@
         "typescript": "*"
     },
     "manifest": {
-        "host_permissions": [
-            "https://*/*"
-        ],
-        "permissions": [
-            "tabs"
-        ]
+        "permissions": []
     }
 }

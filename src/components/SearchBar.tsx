@@ -20,6 +20,7 @@ const SearchBar = (props: SearchBarProps) => {
             <input
                 className="border-none focus:outline-none focus:bg-focus-color w-full h-full text-text-color text-base"
                 onFocus={() => setIsFocused(true)}
+                autoFocus={true}
                 onBlur={() => setIsFocused(false)}
                 onChange={(event) => props.onChangeText(event.target.value)}
                 type="text"/>

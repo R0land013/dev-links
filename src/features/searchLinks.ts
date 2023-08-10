@@ -121,11 +121,11 @@ const groupLinksByCategory = (links: Array<Link>) => {
 
     // Sort links alphabetically within each category
     linkCategories.forEach((aCategory) => {
-        aCategory.links = aCategory.links.sort((a, b) => a.name > b.name ? 1 : -1);
+        aCategory.links = aCategory.links.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
     });
 
     // Sort categories alphabetically by name
-    const sortedCategories = linkCategories.sort((a, b) => a.name > b.name ? 1 : -1);
+    const sortedCategories = linkCategories.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
 
     return sortedCategories;
 };

@@ -1,7 +1,7 @@
 {
     "name": "dev-links",
     "displayName": "Dev Links",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "All links a developer would need.",
     "author": "https://github.com/R0land013",
     "scripts": {

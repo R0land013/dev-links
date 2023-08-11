@@ -40,6 +40,14 @@ For that reason I created **Dev Links**. A browser extension for:
 - ⭐ Leave the need of remember links and names of tools.
 - 🚀 Staying focus and increase your productivity.
 
+## Download
+
+Dev Links is available for:
+
+- 🔗 [Chrome, Opera and Brave](https://chrome.google.com/webstore/detail/eogoekcejgaaaodjgbhnlpmccdmboapb)
+- 🔗 [Firefox](https://addons.mozilla.org/addon/dev-links/)
+- It's coming soon for Edge
+
 ### Built with
 
 - [![Plasmo][Plasmo-framework]][Plasmo-url]

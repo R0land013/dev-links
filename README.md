@@ -51,7 +51,6 @@ For that reason I created **Dev Links**. A browser extension for:
 ### Prerequisites
 
 - Node.js 16.14.x or later
-- Chrome
 - macOS, Windows, or Linux
 
 ### Installation
@@ -115,6 +114,10 @@ You can find my contact info [here](https://r0land013.github.io/).
 
 I wanted to thank to [Javier Alejandro González Casellas](https://github.com/JalexCode) and
 [Manuel Ernesto Garcia](https://github.com/manuelernestog) for the help.
+
+## Support
+
+If you found this project useful you can support me [buying me a coffee☕](https://www.buymeacoffee.com/rolandorio).
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

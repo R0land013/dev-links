@@ -32,6 +32,10 @@ const WelcomeInfo = () => {
                     <span className="mt-2">
                         Made with 💜 by <a href="https://r0land013.github.io/">Rolando Rio Garaboa</a>
                     </span>
+                    
+                    <span className="mt-8">
+                        <a href="https://www.buymeacoffee.com/rolandorio">Buy me a coffee ☕</a>
+                    </span>
                 </div>
             </div>
         </div>

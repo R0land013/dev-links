@@ -15,6 +15,9 @@
       </ul>
     </li>
     <li>
+        <a href="#download">Download</a>
+    </li>
+    <li>
       <a href="#getting-started-with-development">Getting started with development</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -40,6 +43,12 @@ For that reason I created **Dev Links**. A browser extension for:
 - ⭐ Leave the need of remember links and names of tools.
 - 🚀 Staying focus and increase your productivity.
 
+### Built with
+
+- [![Plasmo][Plasmo-framework]][Plasmo-url]
+- [![React][React.js]][React-url]
+- [![Tailwind][Tailwindcss]][Tailwindcss-url]
+
 ## Download
 
 Dev Links is available for:
@@ -47,12 +56,6 @@ Dev Links is available for:
 - 🔗 [Chrome, Opera and Brave](https://chrome.google.com/webstore/detail/eogoekcejgaaaodjgbhnlpmccdmboapb)
 - 🔗 [Firefox](https://addons.mozilla.org/addon/dev-links/)
 - It's coming soon for Edge
-
-### Built with
-
-- [![Plasmo][Plasmo-framework]][Plasmo-url]
-- [![React][React.js]][React-url]
-- [![Tailwind][Tailwindcss]][Tailwindcss-url]
 
 ## Getting started with development
 

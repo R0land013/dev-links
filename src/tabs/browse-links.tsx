@@ -1,4 +1,3 @@
-import Header from "./../components/Header";
 import "./../style.css";
 import LinkCard from "~components/LinkCard";
 import SelectedLinkContext from "~context/selectedLink";
@@ -8,6 +7,7 @@ import FavoriteLinksContext from "~context/favoriteLinks";
 import { addNewFavoriteLink, getFavoriteLinks, removeFavoriteLink } from "~features/favoriteLinks";
 import WelcomeInfo from "~components/WelcomeInfo";
 import NavigationMenu from "~components/NavigationMenu";
+import MainContainer from "~components/MainContainer";
 
 
 const BrowseLinks = () => {
@@ -48,21 +48,21 @@ const BrowseLinks = () => {
 
                 <div className="w-full flex flex-row flex-grow h-[100vh] items-start">
 
-                    <NavigationMenu/>
+                    <NavigationMenu />
 
-                    <div className="flex flex-col w-full h-[100vh] overflow-y-auto">
-                        
-                        <Header />
+
+                    <MainContainer>
 
                         {!selectedLink && (
-                            <WelcomeInfo/>
+                            <WelcomeInfo className="mt-24"/>
+
                         )}
 
                         {selectedLink && (
                             <LinkCard link={selectedLink} />
                         )}
 
-                    </div>
+                    </MainContainer>
 
                 </div>
             </SelectedLinkContext.Provider>

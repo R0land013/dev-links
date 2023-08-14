@@ -26,7 +26,7 @@ const LinkCard = (props: CardLinkProps) => {
     const isFavorite = isFavoriteLink();
 
     return (
-        <Card className="flex flex-col p-8 pt-5 m-5">
+        <Card className="flex flex-col p-8 pt-5 m-5 w-full">
 
             <div className="w-full flex flex-row items-center justify-between">
 

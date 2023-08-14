@@ -1,8 +1,11 @@
 
+interface WelcomeInfoProps {
+    className?: string;
+}
 
-const WelcomeInfo = () => {
+const WelcomeInfo = (props: WelcomeInfoProps) => {
     return (
-        <div className="w-full h-full flex flex-col justify-center items-center">
+        <div className={`w-full h-full flex flex-col justify-center items-center ${props.className}`}>
 
             <h1 className="text-4xl font-bold">
                 Welcome to Dev Links!
@@ -24,17 +27,9 @@ const WelcomeInfo = () => {
                     </li>
                 </ul>
 
-                <div className="text-base text-header-color mt-16 flex flex-col justify-center items-center">
+                <div className="text-base text-header-color mt-8 flex flex-col justify-center items-center">
                     <span>
                         You can add more links and make suggestions <a href="https://github.com/R0land013/dev-links">here</a>
-                    </span>
-
-                    <span className="mt-2">
-                        Made with 💜 by <a href="https://r0land013.github.io/">Rolando Rio Garaboa</a>
-                    </span>
-                    
-                    <span className="mt-8">
-                        <a href="https://www.buymeacoffee.com/rolandorio">Buy me a coffee ☕</a>
                     </span>
                 </div>
             </div>

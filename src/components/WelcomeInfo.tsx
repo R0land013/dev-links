@@ -11,7 +11,11 @@ const WelcomeInfo = (props: WelcomeInfoProps) => {
                 Welcome to Dev Links!
             </h1>
 
-            <div className="mt-8 flex flex-col justify-center items-center">
+            <span className="text-base text-header-color mt-1">
+                All links a developer would need
+            </span>
+
+            <div className="mt-10 flex flex-col justify-center items-center">
 
                 <ul>
                     <li className="mb-2">
@@ -27,7 +31,7 @@ const WelcomeInfo = (props: WelcomeInfoProps) => {
                     </li>
                 </ul>
 
-                <div className="text-base text-header-color mt-8 flex flex-col justify-center items-center">
+                <div className="text-base text-header-color mt-10 flex flex-col justify-center items-center">
                     <span>
                         You can add more links and make suggestions <a href="https://github.com/R0land013/dev-links">here</a>
                     </span>

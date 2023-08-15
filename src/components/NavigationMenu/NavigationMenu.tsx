@@ -53,7 +53,7 @@ const NavigationMenu = (props: NavigationMenuProps) => {
                 className="w-[80%] mb-2"
                 onChangeText={searchLinks} />
 
-            <div className="flex flex-col items-center w-full mt-2 overflow-y-auto">
+            <div className="flex flex-col items-center w-full mt-2 pr-2 overflow-y-auto">
 
                 {loading ? (
 
@@ -97,10 +97,7 @@ const NavigationMenu = (props: NavigationMenuProps) => {
                     </>
                 )}
 
-
-
             </div>
-
 
         </Card>
 

@@ -14,7 +14,7 @@ import WebTemplatesCategoryIcon from "data-base64:~assets/icons/categories/web-t
 import FavoriteIcon from "data-base64:~assets/icons/categories/favorite.svg";
 
 
-export const getIconForLinkCategory = (category: LinkCategoryName | 'Favorites') => {
+export const getIconForLinkCategory = (category: LinkCategoryName) => {
 
     switch (category) {
 

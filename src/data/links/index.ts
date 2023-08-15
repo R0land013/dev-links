@@ -12,7 +12,7 @@ import imageCompressionCategory from "./image-compression";
 import learningCategory from "./learning";
 
 
-export type LinkCategoryName = 'CMS' | 'Colors' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
+export type LinkCategoryName = 'CMS' | 'Colors' | 'Favorites' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
 
 
 export type LinkCategory = {

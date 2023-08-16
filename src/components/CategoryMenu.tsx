@@ -4,6 +4,9 @@ import SelectedLinkContext from '~context/selectedLink';
 import { getIconForLinkCategory } from '~data/category-icons';
 import { hideNavigationMenu } from './NavigationMenu';
 import SelectedLinkCategoryContext from '~context/selectedCategory';
+import ExpandIcon from "data-base64:~assets/icons/general/expand.svg";
+import CollapseIcon from "data-base64:~assets/icons/general/collapse.svg";
+
 
 interface CategoryMenuProps {
     category: LinkCategory
@@ -16,15 +19,16 @@ const CategoryMenu = (props: CategoryMenuProps) => {
     const links = props.category.links;
 
     const selectedLinkContext = useContext(SelectedLinkContext);
-    const {setSelectedLinkCategory} = useContext(SelectedLinkCategoryContext);
-    
+    const { setSelectedLinkCategory } = useContext(SelectedLinkCategoryContext);
+
     const [quantityOfShownItems, setQuantityOfShownItems] = useState<number>(
         QUANTITY_OF_ITEMS_TO_SHOW > links.length ? links.length : QUANTITY_OF_ITEMS_TO_SHOW
     );
     const [isHoveringCategoryName, setIsHoveringCategoryName] = useState(false);
+    const [isHoveringMenu, setIsHoveringMenu] = useState(false);
 
     const showMoreItems = () => {
-        
+
         setQuantityOfShownItems(quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW >= props.category.links.length
             ? links.length : quantityOfShownItems + QUANTITY_OF_ITEMS_TO_SHOW
         );
@@ -34,30 +38,59 @@ const CategoryMenu = (props: CategoryMenuProps) => {
         setQuantityOfShownItems(QUANTITY_OF_ITEMS_TO_SHOW > links.length ? links.length : QUANTITY_OF_ITEMS_TO_SHOW);
     }, [links.length]);
 
+
+    const expandOrCollapseMenu = () => {
+        // Collapse
+        if (quantityOfShownItems === props.category.links.length) {
+            setQuantityOfShownItems(0);
+        }
+        // Expand
+        else {
+            setQuantityOfShownItems(props.category.links.length);
+        }
+    };
+
     return (
         <div
-            className={`flex flex-col items-start w-full p-2 rounded-lg ${isHoveringCategoryName ? 'bg-focus-color' : undefined}`}>
+            className={`flex flex-col items-start w-full p-2 rounded-lg ${isHoveringCategoryName ? 'bg-focus-color' : undefined}`}
+            onMouseEnter={() => setIsHoveringMenu(true)}
+            onMouseLeave={() => setIsHoveringMenu(false)}>
 
-            <button
-                className='flex flex-row justify-start items-center w-full'
-                onMouseEnter={() => setIsHoveringCategoryName(true)}
-                onMouseLeave={() => setIsHoveringCategoryName(false)}
-                onClick={() => {
-                    hideNavigationMenu();
-                    selectedLinkContext.setSelectedLink(undefined);
-                    setSelectedLinkCategory(props.category);
-                }}>
+            <div className='flex flex-row justify-between items-center w-full'>
 
-                <img
-                    src={getIconForLinkCategory(props.category.name)}
-                    className='w-6' />
+                <button
+                    className='flex flex-row justify-start items-center w-full'
+                    onMouseEnter={() => setIsHoveringCategoryName(true)}
+                    onMouseLeave={() => setIsHoveringCategoryName(false)}
+                    onClick={() => {
+                        hideNavigationMenu();
+                        selectedLinkContext.setSelectedLink(undefined);
+                        setSelectedLinkCategory(props.category);
+                    }}>
 
-                <span
-                    className='text-header-color text-lg ml-3 font-medium text-start'>
+                    <img
+                        src={getIconForLinkCategory(props.category.name)}
+                        className='w-6' />
 
-                    {props.category.name}
-                </span>
-            </button>
+                    <span
+                        className='text-header-color text-lg ml-3 font-medium text-start'>
+
+                        {props.category.name}
+                    </span>
+                </button>
+
+                {isHoveringMenu && (
+                    <button
+                        className='flex justify-center items-center p-1 rounded-lg hover:bg-focus-color'
+                        onClick={expandOrCollapseMenu}>
+
+                        <img
+                            src={quantityOfShownItems < props.category.links.length ? ExpandIcon : CollapseIcon}
+                            className='h-5' />
+
+                    </button>
+                )}
+            </div>
 
 
             <div className='flex flex-col w-full'>
@@ -65,7 +98,7 @@ const CategoryMenu = (props: CategoryMenuProps) => {
                 {links.map((aLink, index) => index < quantityOfShownItems && (
                     <button
                         key={aLink.linkUrl}
-                        className={`flex flex-row justify-start pl-6 items-center w-full mt-1 hover:bg-focus-color p-1 rounded-lg border-2 ${ selectedLinkContext.selectedLink?.name === aLink.name ? 'bg-focus-color border-action-color' : 'border-transparent'}`}
+                        className={`flex flex-row justify-start pl-6 items-center w-full mt-1 hover:bg-focus-color p-1 rounded-lg border-2 ${selectedLinkContext.selectedLink?.name === aLink.name ? 'bg-focus-color border-action-color' : 'border-transparent'}`}
                         onClick={() => {
                             hideNavigationMenu();
                             setSelectedLinkCategory(undefined);
@@ -88,19 +121,19 @@ const CategoryMenu = (props: CategoryMenuProps) => {
 
 
             {quantityOfShownItems < links.length && (
-                
+
                 <div className='w-full flex flex-col items-center justify-center mt-2'>
-                    
+
                     <button
                         className='border-none bg-none text-action-color text-[0.75rem]'
                         onClick={showMoreItems}>
-                        
+
                         Show more...
                     </button>
-                
+
                 </div>
             )}
-            
+
         </div>
     );
 };

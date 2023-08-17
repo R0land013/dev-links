@@ -38,6 +38,11 @@
         "typescript": "*"
     },
     "manifest": {
-        "permissions": []
+        "permissions": [],
+        "browser_specific_settings": {
+            "gecko": {
+                "id": "devlinkscontact@gmail.com"
+            }
+        }
     }
 }

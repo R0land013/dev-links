@@ -55,7 +55,7 @@ Dev Links is available for:
 
 - 🔗 [Chrome, Opera and Brave](https://chrome.google.com/webstore/detail/eogoekcejgaaaodjgbhnlpmccdmboapb)
 - 🔗 [Firefox](https://addons.mozilla.org/addon/dev-links/)
-- It's coming soon for Edge
+- 🔗 [Edge](https://microsoftedge.microsoft.com/addons/detail/dev-links/aniglhjaambcimldjhiphablecafiifg)
 
 ## Getting started with development
 

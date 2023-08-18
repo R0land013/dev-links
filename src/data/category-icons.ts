@@ -7,6 +7,7 @@ import IconsCategoryIcon from "data-base64:~assets/icons/categories/icons.svg";
 import ImageCompressionCategoryIcon from "data-base64:~assets/icons/categories/image-compression.svg";
 import LearningCategoryIcon from "data-base64:~assets/icons/categories/learning.svg";
 import LogoCreationCategoryIcon from "data-base64:~assets/icons/categories/logo-creation.svg";
+import LogoPaaSCategoryIcon from "data-base64:~assets/icons/categories/paas.svg";
 import PicturesCategoryIcon from "data-base64:~assets/icons/categories/pictures.svg";
 import ProjectManagementCategoryIcon from "data-base64:~assets/icons/categories/project-management.svg";
 import WebHostingCategoryIcon from "data-base64:~assets/icons/categories/web-hosting.svg";
@@ -41,6 +42,9 @@ export const getIconForLinkCategory = (category: LinkCategoryName) => {
     
     case 'Logo creation':
         return LogoCreationCategoryIcon;
+    
+    case 'PaaS':
+        return LogoPaaSCategoryIcon;
     
     case 'Pictures':
         return PicturesCategoryIcon;

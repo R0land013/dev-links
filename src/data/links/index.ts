@@ -10,9 +10,10 @@ import projectManagementCategory from "./project-management";
 import picturesCategory from "./pictures";
 import imageCompressionCategory from "./image-compression";
 import learningCategory from "./learning";
+import paaSCategory from "./paas";
 
 
-export type LinkCategoryName = 'CMS' | 'Colors' | 'Favorites' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
+export type LinkCategoryName = 'CMS' | 'Colors' | 'Favorites' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'PaaS' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
 
 
 export type LinkCategory = {
@@ -38,6 +39,7 @@ const linksByCategory: Array<LinkCategory> = [
     imageCompressionCategory,
     learningCategory,
     logoCreationCategory,
+    paaSCategory,
     picturesCategory,
     projectManagementCategory,
     webHostingCategory,

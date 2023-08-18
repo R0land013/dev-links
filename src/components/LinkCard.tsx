@@ -59,7 +59,8 @@ const LinkCard = (props: CardLinkProps) => {
                 <Button
                     onClick={() => {
                         window.open(props.link.linkUrl);
-                    }}>
+                    }}
+                    className="p-3">
                     
                     <span className="font-bold text-lg">
                         Open Link

@@ -36,6 +36,9 @@ const CategoryCard = () => {
                             onClick={() => {
                                 setSelectedLinkCategory(undefined);
                                 setSelectedLink(aLink);
+                            }}
+                            onClickOpenLink={() => {
+                                window.open(aLink.linkUrl);
                             }}/>
 
                         {index != selectedLinkCategory.links.length - 1 && (

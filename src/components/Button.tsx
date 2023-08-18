@@ -8,8 +8,11 @@ interface ButtonProps {
 const Button = (props: ButtonProps) => {
     return (
         <button
-            onClick={props.onClick}
-            className={`bg-action-color text-white rounded-xl flex items-center justify-center p-3 font-bold hover:bg-hover-action-color ${props.className}`}>
+            onClick={(event) => {
+                event.stopPropagation();
+                props.onClick();
+            }}
+            className={`bg-action-color text-white rounded-xl flex items-center justify-center font-bold hover:bg-hover-action-color ${props.className}`}>
             {props.children}
         </button>
     );

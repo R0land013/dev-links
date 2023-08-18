@@ -1,6 +1,7 @@
 import type { Link, LinkCategory, LinkCategoryName } from '../index';
 import ColorHunt from './color-hunt';
 import Coolors from './coolors';
+import fffuel from './fffuel';
 
 
 type ColorsCategoryName = Extract<LinkCategoryName, 'Colors'>;
@@ -14,6 +15,7 @@ export type ColorsLink = Omit<Link, 'category'> & {
 const colorsCategoryLinks: Array<ColorsLink> = [
     ColorHunt,
     Coolors,
+    fffuel,
 ];
 
 

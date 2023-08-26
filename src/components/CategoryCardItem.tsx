@@ -37,7 +37,7 @@ const CategoryCardItem = (props: CardCategoryItemProps) => {
                             onClick={() => {
                                 props.onClickOpenLink();
                             }}
-                            className='ml-2 rounded-md pl-1 pr-1'>
+                            className='ml-2 rounded-[8px] pl-2 pr-2'>
 
                             <span className="font-bold text-base">
                                 Open Link

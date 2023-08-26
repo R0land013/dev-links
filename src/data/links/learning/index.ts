@@ -1,9 +1,11 @@
 import type { Link, LinkCategory, LinkCategoryName } from '../index';
 import DeveloperRoadmaps from './developer-roadmaps';
+import edX from './edx';
 import Exercism from './exercism';
 import FreeCodeCamp from './free-code-camp';
 import FullstackOpen from './fullstack-open';
 import Mimo from './mimo';
+import MITOCW from './mit-ocw';
 import OpenBootcamp from './open-bootcamp';
 import RefactoringGuru from './refactoring-guru';
 import Scrimba from './scrimba';
@@ -23,10 +25,12 @@ export type LearningLink = Omit<Link, 'category'> & {
 
 const LearningCategoryLinks: Array<LearningLink> = [
     DeveloperRoadmaps,
+    edX,
     Exercism,
     FreeCodeCamp,
     FullstackOpen,
     Mimo,
+    MITOCW,
     OpenBootcamp,
     RefactoringGuru,
     Scrimba,

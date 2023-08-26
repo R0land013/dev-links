@@ -11,7 +11,7 @@ so you can find visually consistent icons for all your designs.
 const icons8: IconsLink = {
     name: 'icons8',
     category: 'Icons',
-    linkUrl: 'https://icons8.com/icons',
+    linkUrl: 'https://icons8.com/icons/',
     description: icons8Description,
 };
 

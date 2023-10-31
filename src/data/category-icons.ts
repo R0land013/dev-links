@@ -1,6 +1,7 @@
 import type { LinkCategoryName } from "./links";
 import CMSCategoryIcon from "data-base64:~assets/icons/categories/cms.svg";
 import ColorsCategoryIcon from "data-base64:~assets/icons/categories/colors.svg";
+import documentationCategoryIcon from "data-base64:~assets/icons/categories/documentation.svg";
 import FormsCategoryIcon from "data-base64:~assets/icons/categories/forms.svg";
 import FontsCategoryIcon from "data-base64:~assets/icons/categories/fonts.svg";
 import IconsCategoryIcon from "data-base64:~assets/icons/categories/icons.svg";
@@ -24,6 +25,9 @@ export const getIconForLinkCategory = (category: LinkCategoryName) => {
 
     case 'Colors':
         return ColorsCategoryIcon;
+    
+    case 'Documentation':
+        return documentationCategoryIcon;
 
     case 'Forms':
         return FormsCategoryIcon;

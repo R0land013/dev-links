@@ -1,5 +1,6 @@
 import CMSCategory from "./cms";
 import colorsCategory from "./colors";
+import documentationCategory from "./documentation";
 import formsCategory from "./forms";
 import fontsCategory from "./fonts";
 import iconsCategory from "./icons";
@@ -13,7 +14,7 @@ import learningCategory from "./learning";
 import paaSCategory from "./paas";
 
 
-export type LinkCategoryName = 'CMS' | 'Colors' | 'Favorites' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'PaaS' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
+export type LinkCategoryName = 'CMS' | 'Colors' | 'Documentation' | 'Favorites' | 'Forms' | 'Fonts' | 'Icons' | 'Image compression' | 'Learning' | 'Logo creation' | 'PaaS' | 'Pictures' | 'Project management' | 'Web hosting' | 'Web templates';
 
 
 export type LinkCategory = {
@@ -33,6 +34,7 @@ export type Link = {
 const linksByCategory: Array<LinkCategory> = [
     CMSCategory,
     colorsCategory,
+    documentationCategory,
     formsCategory,
     fontsCategory,
     iconsCategory,
